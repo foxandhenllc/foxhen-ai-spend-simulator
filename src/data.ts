@@ -1,12 +1,44 @@
-export const sample = {
+export type ItemStatus = "backlog" | "active" | "blocked" | "ready" | "done";
+
+export type WorkItem = {
+  id: string;
+  title: string;
+  category: string;
+  owner: string;
+  status: ItemStatus;
+  priority: number;
+  effort: number;
+  friction: number;
+  value: number;
+  due: string;
+  notes: string;
+};
+
+export type QualityCheck = {
+  id: string;
+  label: string;
+  passed: boolean;
+  weight: number;
+};
+
+export const sample: {
+  repoName: string;
+  title: string;
+  subtitle: string;
+  serviceLine: string;
+  description: string;
+  repositoryUrl: string;
+  liveDemoUrl: string;
+  theme: { accent: string; accent2: string; ink: string; soft: string; warm: string };
+  items: WorkItem[];
+  checks: QualityCheck[];
+  deliverables: string[];
+} = {
   "repoName": "foxhen-ai-spend-simulator",
   "title": "AI Spend Simulator",
-  "subtitle": "Model budget planning sample",
+  "subtitle": "budget simulator",
   "serviceLine": "AI cost planning",
-  "heroTitle": "Estimate AI workflow spend before shipping the feature.",
-  "heroCopy": "A fictional AI budget simulator that compares usage scenarios, model tiers, daily volume, cache impact, and alert thresholds.",
-  "primaryAction": "Simulate budget",
-  "secondaryAction": "Compare scenarios",
+  "description": "Model AI workflow spend across usage, caching, model mix, retry assumptions, and guardrails.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-ai-spend-simulator",
   "liveDemoUrl": "https://foxhen-ai-spend-simulator.vercel.app",
   "theme": {
@@ -14,115 +46,124 @@ export const sample = {
     "accent2": "#8bd0ff",
     "ink": "#06111f",
     "soft": "#eaf3ff",
-    "warm": "#e9f8ff",
-    "surface": "#fffaf4",
-    "muted": "#5c667a",
-    "border": "rgba(7, 18, 31, 0.12)"
+    "warm": "#e9f8ff"
   },
-  "metrics": [
+  "items": [
     {
-      "label": "Monthly scenario",
-      "value": "$186",
-      "note": "sample estimate"
-    },
-    {
-      "label": "Cache savings",
-      "value": "31%",
-      "note": "+$84 avoided"
-    },
-    {
-      "label": "Alert threshold",
-      "value": "80%",
-      "note": "configured"
-    }
-  ],
-  "stages": [
-    {
-      "label": "Inputs",
-      "detail": "Define tasks, volume, usage ranges, model class, and response requirements.",
-      "status": "ready",
-      "owner": "Product",
-      "index": 1
-    },
-    {
-      "label": "Scenario",
-      "detail": "Compare conservative, expected, and heavy usage profiles.",
-      "status": "active",
-      "owner": "Studio",
-      "index": 2
-    },
-    {
-      "label": "Controls",
-      "detail": "Add cache, batch, retry, and alert assumptions.",
-      "status": "waiting",
-      "owner": "Engineer",
-      "index": 3
-    },
-    {
-      "label": "Handoff",
-      "detail": "Package budget notes and launch guardrails.",
-      "status": "queued",
-      "owner": "Ops",
-      "index": 4
-    }
-  ],
-  "workItems": [
-    {
+      "id": "ai--1",
       "title": "Daily volume",
-      "detail": "Set expected request range",
-      "status": "ready"
+      "category": "Intake",
+      "owner": "Chris",
+      "status": "active",
+      "priority": 5,
+      "effort": 2,
+      "friction": 1,
+      "value": 5,
+      "due": "Today",
+      "notes": "Sample budget simulator work item for ai cost planning."
     },
     {
+      "id": "ai--2",
       "title": "Model mix",
-      "detail": "Compare cheap and premium paths",
-      "status": "active"
+      "category": "Build",
+      "owner": "Fox & Hen",
+      "status": "backlog",
+      "priority": 4,
+      "effort": 4,
+      "friction": 2,
+      "value": 4,
+      "due": "24h",
+      "notes": "Sample budget simulator work item for ai cost planning."
     },
     {
+      "id": "ai--3",
+      "title": "Cache plan",
+      "category": "Review",
+      "owner": "Buyer",
+      "status": "blocked",
+      "priority": 3,
+      "effort": 3,
+      "friction": 4,
+      "value": 4,
+      "due": "48h",
+      "notes": "Sample budget simulator work item for ai cost planning."
+    },
+    {
+      "id": "ai--4",
       "title": "Retry policy",
-      "detail": "Waiting on error tolerance",
-      "status": "waiting"
+      "category": "Export",
+      "owner": "Automation",
+      "status": "ready",
+      "priority": 4,
+      "effort": 2,
+      "friction": 2,
+      "value": 3,
+      "due": "This week",
+      "notes": "Sample budget simulator work item for ai cost planning."
     },
     {
+      "id": "ai--5",
+      "title": "Alert threshold",
+      "category": "Intake",
+      "owner": "QA",
+      "status": "backlog",
+      "priority": 2,
+      "effort": 1,
+      "friction": 1,
+      "value": 3,
+      "due": "Waiting",
+      "notes": "Sample budget simulator work item for ai cost planning."
+    },
+    {
+      "id": "ai--6",
       "title": "Budget memo",
-      "detail": "Queued for final export",
-      "status": "queued"
+      "category": "Build",
+      "owner": "Chris",
+      "status": "done",
+      "priority": 5,
+      "effort": 5,
+      "friction": 3,
+      "value": 5,
+      "due": "Next pass",
+      "notes": "Sample budget simulator work item for ai cost planning."
+    }
+  ],
+  "checks": [
+    {
+      "id": "payer",
+      "label": "Payer or owner is clear",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "deliverable",
+      "label": "Deliverable has acceptance criteria",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "friction",
+      "label": "Account/access friction is documented",
+      "passed": false,
+      "weight": 14
+    },
+    {
+      "id": "handoff",
+      "label": "Handoff package is generated",
+      "passed": false,
+      "weight": 16
+    },
+    {
+      "id": "reuse",
+      "label": "Repeatable pipeline note exists",
+      "passed": true,
+      "weight": 12
     }
   ],
   "deliverables": [
-    {
-      "title": "Cost model",
-      "detail": "Transparent assumptions for usage and unit cost."
-    },
-    {
-      "title": "Scenario compare",
-      "detail": "Best, expected, and spike cases in one view."
-    },
-    {
-      "title": "Guardrail plan",
-      "detail": "Alerts and design changes that protect margin."
-    }
-  ],
-  "timeline": [
-    {
-      "time": "0-1 hr",
-      "detail": "Map AI tasks and expected usage"
-    },
-    {
-      "time": "1-4 hrs",
-      "detail": "Build budget scenarios and controls"
-    },
-    {
-      "time": "4-6 hrs",
-      "detail": "Package launch guardrail memo"
-    }
-  ],
-  "proof": [
-    "Useful for AI automation buyers worried about operating cost.",
-    "Shows practical product management and implementation judgment.",
-    "No live provider account or billing data is used."
+    "Ranked board",
+    "Editable item inspector",
+    "Readiness checklist",
+    "Exportable handoff report"
   ]
-} as const;
-
-export type StageStatus = "ready" | "active" | "waiting" | "queued";
-export type DemoStage = (typeof sample.stages)[number];
-export type WorkItem = (typeof sample.workItems)[number];
+};

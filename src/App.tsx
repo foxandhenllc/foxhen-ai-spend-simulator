@@ -104,7 +104,7 @@ function App() {
     const prompt = [
       `Fork AI Spend Simulator as a public-safe client demo.`,
       `Service line: AI cost planning.`,
-      "Keep all records fictional, remove secrets, update sample data in src/data.ts, and run npm run build before publishing.",
+      "Keep all records fictional, remove credentials, update sample data in src/data.ts, and run npm run build before publishing.",
     ].join(" ");
     if (navigator.clipboard) {
       void navigator.clipboard.writeText(prompt).then(() => {

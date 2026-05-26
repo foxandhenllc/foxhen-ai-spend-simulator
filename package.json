@@ -26,11 +26,22 @@
   "homepage": "https://foxhen-ai-spend-simulator.vercel.app",
   "keywords": [
     "ai-costs",
+    "budget",
     "budgeting",
     "calculator",
+    "cost",
+    "fox-and-hen",
+    "guardrail",
+    "llm",
+    "planning",
     "react",
+    "simulator",
+    "small-business",
+    "spend",
+    "tool",
     "typescript",
+    "usage",
     "vite",
-    "small-business"
+    "workflow-tools"
   ]
 }

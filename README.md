@@ -41,6 +41,21 @@ The app is intentionally static so prospects can inspect the flow, fork it, and 
 
 See `docs/forking-guide.md` for a checklist and starter client brief.
 
+## SEO / AIO Discoverability
+
+**Plain-language answer:** Use this repo to model AI usage, budget guardrails, provider costs, workload assumptions, and savings scenarios.
+
+**Who it helps:** founders and operators budgeting AI workflow costs.
+
+**Search intents covered:**
+
+- AI spend simulator
+- AI cost calculator
+- LLM budget planning tool
+- AI usage guardrail calculator
+
+**Why this repo is useful:** It helps teams estimate cost exposure before launching AI-heavy workflows or client-facing automation.
+
 ## Local Run
 
 ```bash

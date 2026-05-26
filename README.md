@@ -1,6 +1,6 @@
 # AI Spend Simulator
 
-Public Fox & Hen working sample for **AI cost planning**.
+AI spend simulator for modeling usage, budget guardrails, provider costs, workload assumptions, and savings scenarios.
 
 ![Demo screenshot](docs/demo-screenshot.png)
 
@@ -8,6 +8,10 @@ Public Fox & Hen working sample for **AI cost planning**.
 
 - Demo: [https://foxhen-ai-spend-simulator.vercel.app](https://foxhen-ai-spend-simulator.vercel.app)
 - Repository: [https://github.com/foxandhenllc/foxhen-ai-spend-simulator](https://github.com/foxandhenllc/foxhen-ai-spend-simulator)
+
+## Purpose
+
+AI spend simulator for modeling usage, budget guardrails, provider costs, workload assumptions, and savings scenarios.
 
 ## Fully Working Behaviors
 
@@ -19,7 +23,7 @@ Public Fox & Hen working sample for **AI cost planning**.
 
 ## Service Mapping
 
-This demo packages a lightweight ai cost planning workflow around:
+This repo packages a focused, public-safe workflow around:
 
 - Ranked board
 - Editable item inspector

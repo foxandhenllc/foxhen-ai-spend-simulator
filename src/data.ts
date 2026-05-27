@@ -40,7 +40,7 @@ export const sample: {
   "serviceLine": "AI cost planning",
   "description": "Model AI workflow spend across usage, caching, model mix, retry assumptions, and guardrails.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-ai-spend-simulator",
-  "liveDemoUrl": "https://foxhen-ai-spend-simulator.vercel.app",
+  "liveDemoUrl": "https://freetoolsforpeople.com/ai-spend-simulator",
   "theme": {
     "accent": "#29466d",
     "accent2": "#8bd0ff",

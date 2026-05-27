@@ -23,7 +23,7 @@
     "node": ">=20"
   },
   "description": "AI spend simulator for modeling usage, budget guardrails, provider costs, workload assumptions, and savings scenarios.",
-  "homepage": "https://foxhen-ai-spend-simulator.vercel.app",
+  "homepage": "https://freetoolsforpeople.com/ai-spend-simulator",
   "keywords": [
     "ai-costs",
     "budget",

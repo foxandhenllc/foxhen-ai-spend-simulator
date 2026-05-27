@@ -6,7 +6,7 @@ AI spend simulator for modeling usage, budget guardrails, provider costs, worklo
 
 ## Live Demo
 
-- Demo: [https://foxhen-ai-spend-simulator.vercel.app](https://foxhen-ai-spend-simulator.vercel.app)
+- Demo: [https://freetoolsforpeople.com/ai-spend-simulator](https://freetoolsforpeople.com/ai-spend-simulator)
 - Repository: [https://github.com/foxandhenllc/foxhen-ai-spend-simulator](https://github.com/foxandhenllc/foxhen-ai-spend-simulator)
 
 ## Purpose
